@@ -38,15 +38,7 @@ namespace ConsoleApp1
 
         private static string? FindConsoleSections(string csFilePath)
         {
-            string data = string.Empty;
-            try
-            {
-                data = File.ReadAllText(csFilePath);
-            }
-            catch
-            {
-                return null;
-            }
+            string data = File.ReadAllText(csFilePath);
             string[] lines = data.Split(Environment.NewLine);
             StringBuilder builder = new StringBuilder();
             for (var i = 0; i < lines.Length; i++)
